@@ -39,6 +39,10 @@ included.
 4. The tool extracts technical terms with KeyBERT and filters them by semantic
    similarity to the selected category features. Uncheck unwanted terms and save
    the remaining ones to a text file.
+5. Alternatively run the command-line tool for headless environments:
+   ```bash
+   python pdf_processing_cli.py D7960_N-en.pdf
+   ```
 
 ## Help
 
