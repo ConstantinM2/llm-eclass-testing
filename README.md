@@ -10,21 +10,35 @@ see Abstract
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+The GUI uses Python with several third party libraries. Install them in a virtual
+environment with pip:
+
+```bash
+python3 -m pip install PyPDF2 pdfplumber keybert sentence-transformers torch
+```
+
+The application relies on a graphical desktop environment for Tkinter. Make sure
+you run it on a system that can display windows (e.g. Windows, macOS or Linux
+with X11/Wayland).
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+Clone this repository or download its ZIP archive and extract it. No additional
+configuration is required; the example PDFs and the ECLASS JSON file are already
+included.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+1. Launch the GUI:
+   ```bash
+   python pdf-processing-tool.py
+   ```
+2. Click **"Open PDF"** and select one of the provided data sheets
+   (`D7960_N-en.pdf` or `HY30-2800-UK.pdf`).
+3. Choose exactly one suggested ECLASS category and press **"Next"**.
+4. The tool extracts technical terms with KeyBERT and filters them by semantic
+   similarity to the selected category features. Uncheck unwanted terms and save
+   the remaining ones to a text file.
 
 ## Help
 
